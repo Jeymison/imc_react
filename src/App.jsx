@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import TabelaIMC from './components/Tabela';
 
 
 function App() {
@@ -36,7 +37,8 @@ function App() {
       <input className='input' type="number"  value={altura} onChange={(e) => setAltura(Number(e.target.value))}/>
       <button className='button' type='button' onClick={calcular}>Calcular</button>
       <h1 className='result'>IMC: {result}</h1>
-      <h3 className='result'>Sua classificação: {classificacaoIMC()}</h3><br />
+      <h3 className='result'>Sua classificação: {classificacaoIMC()}</h3>
+      <TabelaIMC/>
     </div>
   )
 }
